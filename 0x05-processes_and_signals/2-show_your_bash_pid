@@ -14,5 +14,6 @@ do
 	sleep 2
 	trap 'echo "I hate the kill command"; rm -rf /var/run/myscript.pid; exit' SIGTERM
 	trap 'echo "Y U no love me?!"' SIGINT
-	trap 'rm -rf /var/run/myscript.pid; exit' SIGQUIT
+	#trap 'rm -rf /var/run/myscript.pid; exit' SIGQUIT
+	trap 'terminator' SIGQUITgit
 done
